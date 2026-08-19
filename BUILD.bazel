@@ -1,0 +1,14 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test")
+load("@rules_sourcemod//:defs.bzl", "sourcemod_plugin")
+
+package(default_visibility = ["//visibility:public"])
+
+sourcemod_plugin(
+    name = "empty_team_bots",
+    src = "empty_team_bots.sp",
+)
+
+build_test(
+    name = "empty_team_bots_build_test",
+    targets = [":empty_team_bots"],
+)

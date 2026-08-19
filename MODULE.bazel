@@ -1,0 +1,15 @@
+"""empty_team_bots — a SourceMod plugin that fills an empty CS:S team with bots."""
+
+module(
+    name = "empty_team_bots",
+    version = "1.1",
+)
+
+bazel_dep(name = "bazel_skylib", version = "1.9.0")
+bazel_dep(name = "rules_sourcemod", version = "1.0.0")
+
+git_override(
+    module_name = "rules_sourcemod",
+    commit = "ee1f2ad7ea6280a524f36c6c1763c78ec1af4bb4",
+    remote = "https://github.com/kleinpa/rules_sourcemod.git",
+)

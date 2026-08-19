@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "renovate/**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Test
+        run: bazelisk test //... --test_output=errors
+
+      - name: Upload plugin
+        uses: actions/upload-artifact@v7
+        with:
+          name: empty_team_bots
+          path: bazel-bin/empty_team_bots.smx
