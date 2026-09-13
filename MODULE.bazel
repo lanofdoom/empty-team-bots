@@ -10,6 +10,6 @@ bazel_dep(name = "rules_sourcemod", version = "1.0.0")
 
 git_override(
     module_name = "rules_sourcemod",
-    commit = "257d1e9d166591fb768ac6ae480d28f9c5ec328d",
+    commit = "6b855b477df775d48d4a51b7a9ddb73eea51ca0a",
     remote = "https://github.com/kleinpa/rules_sourcemod.git",
 )

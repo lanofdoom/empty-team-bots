@@ -476,7 +476,7 @@
     },
     "@@rules_sourcemod+//hl2sdk:repositories.bzl%hl2sdk": {
       "general": {
-        "bzlTransitiveDigest": "4cknNVaR6aDQfcJJ1UpFstz88yjBveGy8g/IyfZaNqg=",
+        "bzlTransitiveDigest": "hdfIxsY6U3sVX4qnOCuboA/itvAyB7HLUm2q2u0wZc4=",
         "usagesDigest": "wRAsMRik6WQZo84CMnYlzjCjNlH9udcaw8Zt0WmQp9Q=",
         "recordedInputs": [],
         "generatedRepoSpecs": {
@@ -520,7 +520,7 @@
     },
     "@@rules_sourcemod+//sourcemod:extensions.bzl%sourcemod": {
       "general": {
-        "bzlTransitiveDigest": "npTU1so2EMYRAbHn3MQgeTzld8PGxFyRICmk/A8HY4E=",
+        "bzlTransitiveDigest": "RcP/njMYG5eaHxk3+EYm5/uoJUn5ukNo3uwbWStwoyE=",
         "usagesDigest": "i0rdssyETHnCgIhtE5TemLB0NcyIFALHTSB94E3Oylo=",
         "recordedInputs": [],
         "generatedRepoSpecs": {
