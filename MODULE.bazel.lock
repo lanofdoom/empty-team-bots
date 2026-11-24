@@ -473,63 +473,6 @@
           }
         }
       }
-    },
-    "@@rules_sourcemod+//hl2sdk:repositories.bzl%hl2sdk": {
-      "general": {
-        "bzlTransitiveDigest": "hdfIxsY6U3sVX4qnOCuboA/itvAyB7HLUm2q2u0wZc4=",
-        "usagesDigest": "wRAsMRik6WQZo84CMnYlzjCjNlH9udcaw8Zt0WmQp9Q=",
-        "recordedInputs": [],
-        "generatedRepoSpecs": {
-          "hl2sdk_css": {
-            "repoRuleId": "@@rules_sourcemod+//hl2sdk:repositories.bzl%hl2sdk_repository",
-            "attributes": {
-              "branch": "css"
-            }
-          },
-          "hl2sdk_tf2": {
-            "repoRuleId": "@@rules_sourcemod+//hl2sdk:repositories.bzl%hl2sdk_repository",
-            "attributes": {
-              "branch": "tf2"
-            }
-          },
-          "hl2sdk_l4d2": {
-            "repoRuleId": "@@rules_sourcemod+//hl2sdk:repositories.bzl%hl2sdk_repository",
-            "attributes": {
-              "branch": "l4d2"
-            }
-          },
-          "hl2sdk_sdk2013": {
-            "repoRuleId": "@@rules_sourcemod+//hl2sdk:repositories.bzl%hl2sdk_repository",
-            "attributes": {
-              "branch": "sdk2013"
-            }
-          },
-          "metamod_source": {
-            "repoRuleId": "@@rules_sourcemod+//hl2sdk:repositories.bzl%metamod_repository",
-            "attributes": {
-              "branches": [
-                "css",
-                "l4d2",
-                "sdk2013",
-                "tf2"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "@@rules_sourcemod+//sourcemod:extensions.bzl%sourcemod": {
-      "general": {
-        "bzlTransitiveDigest": "M1IRJFOBwxPRLgJzPO/MKRooox+8R3XilCiZ7Etxb1E=",
-        "usagesDigest": "i0rdssyETHnCgIhtE5TemLB0NcyIFALHTSB94E3Oylo=",
-        "recordedInputs": [],
-        "generatedRepoSpecs": {
-          "sourcemod_sdk": {
-            "repoRuleId": "@@rules_sourcemod+//sourcemod:repositories.bzl%sourcemod_sdk_repository",
-            "attributes": {}
-          }
-        }
-      }
     }
   },
   "facts": {},
