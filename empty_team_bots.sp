@@ -21,6 +21,7 @@ ConVar g_cvBotQuotaMode;
 ConVar g_cvBotJoinTeam;
 
 bool g_bBalancing;
+bool g_bMapHasNav;
 
 public void OnPluginStart()
 {
@@ -35,6 +36,21 @@ public void OnPluginStart()
 
     HookEvent("round_start", Event_RoundStart);
     HookEvent("player_team", Event_PlayerTeam);
+}
+
+public void OnMapStart()
+{
+    char mapName[PLATFORM_MAX_PATH];
+    GetCurrentMap(mapName, sizeof(mapName));
+
+    char navPath[PLATFORM_MAX_PATH];
+    Format(navPath, sizeof(navPath), "maps/%s.nav", mapName);
+
+    // Bots need a real nav mesh to path around; the server can generate one
+    // on the fly for maps that ship without one, but that in-game generation
+    // is unreliable (bots stuck, crashes). Rather than risk that, just don't
+    // field bots on maps with no nav mesh already on disk.
+    g_bMapHasNav = FileExists(navPath, true);
 }
 
 public void OnConfigsExecuted()
@@ -97,6 +113,13 @@ public void OnClientDisconnect_Post(int client)
 // map-load and left the stale quota in place again.
 void ReEvaluateBots(bool duringMapLoad = false)
 {
+    if (!g_bMapHasNav)
+    {
+        g_cvBotQuota.SetInt(0);
+        ServerCommand("bot_kick");
+        return;
+    }
+
     int ctHumans, tHumans, humans;
     for (int i = 1; i <= MaxClients; i++)
     {
